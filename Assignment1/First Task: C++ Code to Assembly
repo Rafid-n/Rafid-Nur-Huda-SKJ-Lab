@@ -1,0 +1,23 @@
+// add_numbers.cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 5;
+    int b = 12;
+    int sum = a + b;
+    
+    cout << "Result: " << sum << endl;
+    return 0;
+}
+
+// Makefile
+all: add_numbers
+add_numbers: add_numbers.cpp
+	g++ -o add_numbers add_numbers.cpp
+dump: add_numbers
+	objdump -d add_numbers.exe > add_numbers.asm
+clean: 
+	rm -f add_numbers.exe add_numbers.asm
+run: add_numbers
+	./add_numbers
