@@ -1,0 +1,13 @@
+// add_numbers.cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 5;
+    int b = 12;
+    int sum = a + b;
+    
+    cout << "Result: " << sum << endl;
+    return 0;
+}
+
